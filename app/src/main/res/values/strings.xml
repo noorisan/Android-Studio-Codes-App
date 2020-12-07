@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Android Studio Codes</string>
+    <string name="heroes_name">heroName</string>
+    <string name="detail">Detail</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
+    <string name="favorite">Favorite</string>
+    <string name="share">Share</string>
+    <string name="submit">Submit</string>
+    <string name="select_city">Select City : -</string>
+    <string name="nim_mahasiswa">Nim Mahasiswa</string>
+    <string name="simpan">Simpan</string>
+    <string-array name="listJurusan">
+        <item>Teknik Informatika</item>
+        <item>Teknik Pertambangan</item>
+        <item>Teknik Sipil</item>
+    </string-array>
+</resources>
