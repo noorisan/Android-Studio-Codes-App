@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/asicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Prototype">
-        <activity android:name=".AutoCompleteWidget"></activity>
+        <activity android:name=".AutoCompleteWidget" />
         <activity android:name=".SpinnerWidget" />
         <activity android:name=".DetailIntentActivityWithData" />
         <activity android:name=".MainActivity">

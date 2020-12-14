@@ -11,7 +11,7 @@
         android:id="@+id/edt_namapanjang"
         android:layout_width="match_parent"
         android:layout_height="79dp"
-        android:hint="Nama Lenkap" />
+        android:hint="Nama Lengkap" />
 
     <EditText
         android:id="@+id/edt_nim"
@@ -32,4 +32,20 @@
         android:layout_height="wrap_content"
         android:text="@string/simpan" />
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:elevation="6dp"
+            android:src="@drawable/ic_baseline_code_24"
+            android:visibility="visible"
+            app:backgroundTint="@color/design_default_color_primary"
+            app:fabSize="normal"
+            tools:visibility="visible" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>

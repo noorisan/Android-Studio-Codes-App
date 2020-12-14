@@ -5,25 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class SpinnerWidget extends AppCompatActivity {
     EditText namapanjang;
     EditText nim;
     Spinner jurusan;
     Button simpan;
-
+    public int[] judul={1,2,3};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinner_widget);
-
+        FloatingActionButton fab =findViewById(R.id.fab_btn);
         namapanjang=(EditText)findViewById(R.id.edt_namapanjang);
         nim=(EditText)findViewById(R.id.edt_nim);
         jurusan=(Spinner)findViewById(R.id.spn_jurusan);
@@ -49,5 +48,12 @@ public class SpinnerWidget extends AppCompatActivity {
                 dialog.show();
             }
         });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
+
 }
