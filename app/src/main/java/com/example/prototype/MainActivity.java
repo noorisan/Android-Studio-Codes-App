@@ -111,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
        }else if (hero.getName().equals("Linnier Layout")) {
            Intent move = new Intent(MainActivity.this, LinnierActivity.class);
            startActivity(move);
+       }else if (hero.getName().equals("Progress Bar")) {
+           Intent move = new Intent(MainActivity.this, ProgressBar.class);
+           startActivity(move);
+       }else if (hero.getName().equals("Map View")) {
+           Intent move = new Intent(MainActivity.this, MapView.class);
+           startActivity(move);
        }
         //Toast.makeText(this, "Kamu memilih " + hero.getName(), Toast.LENGTH_SHORT).show();
 
