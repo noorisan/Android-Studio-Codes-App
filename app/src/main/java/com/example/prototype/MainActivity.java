@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
            startActivity(move);
        }else if (hero.getName().equals("Web View")){
            Intent move=new Intent(MainActivity.this, WebView.class);
+           move.putExtra(WebView.EXTRA_URL,"https://github.com/noorisan/Android-Studio-Codes-App");
            startActivity(move);
        }else if (hero.getName().equals("Linnier Layout")) {
            Intent move = new Intent(MainActivity.this, LinnierActivity.class);

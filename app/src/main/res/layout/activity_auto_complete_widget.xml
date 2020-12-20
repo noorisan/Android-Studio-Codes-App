@@ -6,14 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".AutoCompleteWidget"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AutoCompleteTextView"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
     <AutoCompleteTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:hint="Masukan Nama"
         android:padding="15dp"
-        android:textColor="@color/black"
         android:id="@+id/AutoCompleteTextDemo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="MultiAutoCompleteTextView"
+        android:textAlignment="center"
+        android:gravity="center_horizontal" />
+    <MultiAutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Beberapa Nama"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:id="@+id/MultiAutoCompleteTextDemo"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

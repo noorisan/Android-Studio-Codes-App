@@ -9,7 +9,7 @@ import android.webkit.WebViewClient;
 
 public class WebView extends AppCompatActivity {
 android.webkit.WebView webView;
-    public static final String EXTRA_URL="https://www.google.com/";
+    public static final String EXTRA_URL="https://github.com/noorisan/Android-Studio-Codes-App";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +18,9 @@ android.webkit.WebView webView;
         WebSettings webSettings= webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new Callback());
-        webView.loadUrl(EXTRA_URL);
+        String url=getIntent().getStringExtra(EXTRA_URL);
+        String text=url;
+        webView.loadUrl(text);
     }
 
     private class Callback extends WebViewClient {
