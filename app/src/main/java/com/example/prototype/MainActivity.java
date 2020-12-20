@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AutoCompleteTextView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -96,13 +97,19 @@ public class MainActivity extends AppCompatActivity {
        if (hero.getName().equals("Spinner")){
            Intent move=new Intent(MainActivity.this,SpinnerWidget.class);
            startActivity(move);
-       }else if (hero.getName().equals("Web View")){
+       }else if (hero.getName().equals("a")){
            Intent moveWithData=new Intent(MainActivity.this,DetailIntentActivityWithData.class);
            moveWithData.putExtra(DetailIntentActivityWithData.EXTRA_NAMA,hero.getName());
            moveWithData.putExtra("pic",hero.getPhoto());
            startActivity(moveWithData);
        }else if (hero.getName().equals("Auto Complete TextView")){
            Intent move=new Intent(MainActivity.this, AutoCompleteWidget.class);
+           startActivity(move);
+       }else if (hero.getName().equals("Web View")){
+           Intent move=new Intent(MainActivity.this, WebView.class);
+           startActivity(move);
+       }else if (hero.getName().equals("Linnier Layout")) {
+           Intent move = new Intent(MainActivity.this, LinnierActivity.class);
            startActivity(move);
        }
         //Toast.makeText(this, "Kamu memilih " + hero.getName(), Toast.LENGTH_SHORT).show();

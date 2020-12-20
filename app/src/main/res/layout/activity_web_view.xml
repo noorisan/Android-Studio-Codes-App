@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AutoCompleteWidget"
-    android:orientation="vertical">
-    <AutoCompleteTextView
+    tools:context=".WebView">
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:hint="Masukan Nama"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:id="@+id/AutoCompleteTextDemo"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/txtautotext" />
+        android:layout_height="match_parent"/>
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -36,4 +25,5 @@
             app:fabSize="normal"
             tools:visibility="visible" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</LinearLayout>
+
+</RelativeLayout>
