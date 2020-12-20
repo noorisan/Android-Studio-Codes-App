@@ -1,5 +1,6 @@
 package com.example.prototype;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,14 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
     private ArrayList<Hero> listHero;
     public CardViewHeroAdapter(ArrayList<Hero> list) {
         this.listHero = list;
+    }
+    private CardViewHeroAdapter.OnItemClickCallback onItemClickCallback;
+    public void setOnItemClickCallback(CardViewHeroAdapter.OnItemClickCallback onItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback;
+    }
+    private CardViewHeroAdapter.OnItemClickCallback onItemClickCallback2;
+    public void setOnItemClickCallback2(CardViewHeroAdapter.OnItemClickCallback onItemClickCallback2) {
+        this.onItemClickCallback2 = onItemClickCallback2;
     }
     @NonNull
     @Override
@@ -47,17 +56,28 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
         holder.btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "Share " +
-                        listHero.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(holder.itemView.getContext(), "Share " +listHero.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                onItemClickCallback2.onItemClicked(listHero.get(holder.getAdapterPosition()));
             }
         });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listHero.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                onItemClickCallback.onItemClicked(listHero.get(holder.getAdapterPosition()));
+                //Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listHero.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
+                //Intent move =new Intent(Intent.ACTION_SEND);
+                //move.setType("text/plain");
+                //move.putExtra(Intent.EXTRA_SUBJECT,"Insert Subject Here");
+                //String app_url="https://play.google.com/store/apps/details?id=com.example.administrator";
+                //move.putExtra(Intent.EXTRA_TEXT,app_url);
+                //startActivity();
             }
         });
     }
+    public interface OnItemClickCallback {
+        void onItemClicked(Hero data);
+    }
+
 
     @Override
     public int getItemCount() {

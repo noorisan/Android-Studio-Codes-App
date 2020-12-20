@@ -87,6 +87,38 @@ public class MainActivity extends AppCompatActivity {
         rvHeroes.setLayoutManager(new LinearLayoutManager(this));
         CardViewHeroAdapter cardViewHeroAdapter = new CardViewHeroAdapter(list);
         rvHeroes.setAdapter(cardViewHeroAdapter);
+        cardViewHeroAdapter.setOnItemClickCallback(new CardViewHeroAdapter.OnItemClickCallback() {
+            public void actIntent(String url){
+                Intent move=new Intent(MainActivity.this, WebView.class);
+                move.putExtra(WebView.EXTRA_URL,url);
+                startActivity(move);
+            }
+            @Override
+            public void onItemClicked(Hero data) {
+                if (data.getName().equals("Spinner")){
+                    actIntent("https://developer.android.com/guide/topics/ui/controls/spinner");
+                }else if (data.getName().equals("Auto Complete TextView")){
+                    actIntent("https://developer.android.com/reference/android/widget/AutoCompleteTextView");
+                }
+            }
+        });
+        cardViewHeroAdapter.setOnItemClickCallback2(new CardViewHeroAdapter.OnItemClickCallback() {
+            public void ActIntent(String app_url){
+                Intent move =new Intent(Intent.ACTION_SEND);
+                move.setType("text/plain");
+                move.putExtra(Intent.EXTRA_SUBJECT,"Insert Subject Here");
+                move.putExtra(Intent.EXTRA_TEXT,app_url);
+                startActivity(Intent.createChooser(move,"Share Via"));
+            }
+            @Override
+            public void onItemClicked(Hero data) {
+                if (data.getName().equals("Spinner")){
+                    ActIntent("https://developer.android.com/guide/topics/ui/controls/spinner");
+                }else if (data.getName().equals("Auto Complete TextView")){
+                    ActIntent("https://developer.android.com/reference/android/widget/AutoCompleteTextView");
+                }
+            }
+        });
     }
     private void setActionBarTitle(String title) {
         if (getSupportActionBar() != null) {
