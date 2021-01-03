@@ -150,6 +150,9 @@ public class MainActivity extends AppCompatActivity {
        }else if (hero.getName().equals("Map View")) {
            Intent move = new Intent(MainActivity.this, MapView.class);
            startActivity(move);
+       }else if (hero.getName().equals("Date and Time")) {
+           Intent move = new Intent(MainActivity.this, DateTime.class);
+           startActivity(move);
        }
         //Toast.makeText(this, "Kamu memilih " + hero.getName(), Toast.LENGTH_SHORT).show();
 

@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/asicon"
         android:supportsRtl="true"
         android:theme="@style/Theme.Prototype">
-        <activity android:name=".MapView"></activity>
+        <activity android:name=".DateTime"></activity>
+        <activity android:name=".MapView" />
         <activity android:name=".ProgressBar" />
         <activity android:name=".LinnierActivity" />
         <activity android:name=".WebView" />

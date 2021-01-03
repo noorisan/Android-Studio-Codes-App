@@ -9,7 +9,8 @@ public class HeroesData {
             "Web View",
             "Linnier Layout",
             "Progress Bar",
-            "Map View"
+            "Map View",
+            "Date and Time"
     };
     private static String[] heroDetails={
             "Spinner menyediakan cara cepat untuk memilih salah satu dari sekumpulan nilai. Dalam status default, spinner menampilkan nilai yang dipilihnya saat ini.",
@@ -17,7 +18,8 @@ public class HeroesData {
             "WebView adalah komponen sistem yang dibuat oleh Chrome dan memungkinkan aplikasi Android dapat menampilkan halaman website tanpa harus membuka web browser.",
             "Linner Layout",
             "Progress Bar...",
-            "Map View"
+            "Map View",
+            "Date and Time"
     };
     private static int[] heroesImages = {
             R.drawable.spinner,
@@ -25,7 +27,8 @@ public class HeroesData {
             R.drawable.webview,
             R.drawable.linnier,
             R.drawable.loading,
-            R.drawable.map
+            R.drawable.map,
+            R.drawable.kalender
     };
 
     static ArrayList<Hero> getListData() {

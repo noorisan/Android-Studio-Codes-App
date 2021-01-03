@@ -62,19 +62,19 @@
             <Button
                 android:id="@+id/btn_set_favorite"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/favorite"
-                android:textSize="12sp" />
+                android:textSize="10sp" />
             <Button
                 android:id="@+id/btn_set_share"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/share"
-                android:textSize="12sp" />
+                android:textSize="10sp" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

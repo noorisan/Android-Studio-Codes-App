@@ -65,12 +65,6 @@ public class CardViewHeroAdapter extends RecyclerView.Adapter<CardViewHeroAdapte
             public void onClick(View v) {
                 onItemClickCallback.onItemClicked(listHero.get(holder.getAdapterPosition()));
                 //Toast.makeText(holder.itemView.getContext(), "Kamu memilih " + listHero.get(holder.getAdapterPosition()).getName(), Toast.LENGTH_SHORT).show();
-                //Intent move =new Intent(Intent.ACTION_SEND);
-                //move.setType("text/plain");
-                //move.putExtra(Intent.EXTRA_SUBJECT,"Insert Subject Here");
-                //String app_url="https://play.google.com/store/apps/details?id=com.example.administrator";
-                //move.putExtra(Intent.EXTRA_TEXT,app_url);
-                //startActivity();
             }
         });
     }
