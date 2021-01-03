@@ -19,16 +19,17 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (getF().equals("MainActivityACT")){
-            return inflater.inflate(R.layout.fragment_tabslayout,container,false);
+            return inflater.inflate(R.layout.f_ma_act,container,false);
+        }else if (getF().equals("Activity_MainACT")){
+            return inflater.inflate(R.layout.f_am_act,container,false);
         }else if (getF().equals("MainActivitySpinner")){
-            return inflater.inflate(R.layout.fragment_tabslayout2,container,false);
-        }else if (getF().equals("Noor")){
-            return inflater.inflate(R.layout.fragment_tabslayout2,container,false);
+            return inflater.inflate(R.layout.fragment_tabslayout,container,false);
+        }else if (getF().equals("Activity_MainSpinner")){
+            return inflater.inflate(R.layout.fragment_tabslayout,container,false);
         }else {
             return inflater.inflate(R.layout.fragment_tabslayout,container,false);
         }
     }
-
     public String getF() {
         return F;
     }

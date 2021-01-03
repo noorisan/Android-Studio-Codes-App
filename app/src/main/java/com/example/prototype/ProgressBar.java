@@ -3,10 +3,13 @@ package com.example.prototype;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ProgressBar extends AppCompatActivity {
     Button btnProgress;
@@ -19,6 +22,16 @@ public class ProgressBar extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_bar);
         addListenerOnButton();
+        FloatingActionButton fab =findViewById(R.id.fab_btn);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ProgressBar.this,Tabslayout.class);
+                i.putExtra(Tabslayout.EXTRA_DATA,"ProgressBar");
+                startActivity(i);
+            }
+        });
     }
     public void addListenerOnButton(){
         btnProgress=findViewById(R.id.btnProgress);
