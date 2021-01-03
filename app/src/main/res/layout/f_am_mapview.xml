@@ -9,51 +9,35 @@
         android:layout_height="wrap_content">
 
         <TextView
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="
-&lt;?xml version=''1.0'' encoding=''utf-8''?&gt;\n
-&lt;LinearLayout xmlns:android=''http://schemas.android.com/apk/res/android''\n
-    xmlns:app=''http://schemas.android.com/apk/res-auto''\n
+&lt;?xml version=''1.0'' encoding=''utf-8''?&gt;\n\n
+&lt;LinearLayout xmlns:android=''http://schemas.android.com/apk/res/android''\n\n
+    xmlns:app=''http://schemas.android.com/apk/res-auto''\n\n
     xmlns:tools=''http://schemas.android.com/tools''\n
     android:layout_width=''match_parent''\n
     android:layout_height=''match_parent''\n
-    tools:context=''.AutoCompleteWidget''\n
-    android:orientation=''vertical''&gt;\n
+    android:orientation=''vertical''\n
+    tools:context=''.MainActivity''&gt;\n
+\n
     &lt;TextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:text=''AutoCompleteTextView''\n
-        android:textAlignment=''center''\n
-        android:gravity=''center_horizontal'' /&gt;\n
-    &lt;AutoCompleteTextView\n
-        android:layout_width=''match_parent''\n
+        android:layout_width=''wrap_content''\n
         android:layout_height=''wrap_content''\n
         android:layout_margin=''20dp''\n
-        android:hint=''Masukan Nama''\n
-        android:padding=''15dp''\n
-        android:id=''@+id/AutoCompleteTextDemo''/&gt;\n
-    &lt;TextView\n
+        android:text=''Pencarian Lokasi''/&gt;\n
+    &lt;EditText\n
         android:layout_width=''match_parent''\n
         android:layout_height=''wrap_content''\n
-        android:layout_marginTop=''10dp''\n
-        android:text=''MultiAutoCompleteTextView''\n
-        android:textAlignment=''center''\n
-        android:gravity=''center_horizontal'' /&gt;\n
-    &lt;MultiAutoCompleteTextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:hint=''Masukan Beberapa Nama''\n
+        android:id=''@+id/edtSearch''\n
         android:layout_margin=''20dp''\n
-        android:padding=''15dp''\n
-        android:id=''@+id/MultiAutoCompleteTextDemo''/&gt;\n
-    &lt;TextView\n
-        android:layout_width=''match_parent''\n
+        android:hint=''masukan lokasi yang ingin anda cari''/&gt;\n
+    &lt;Button\n
+        android:layout_width=''wrap_content''\n
         android:layout_height=''wrap_content''\n
-        android:layout_marginLeft=''20dp''\n
-        android:layout_marginRight=''20dp''\n
-        android:id=''@+id/txtautotext'' /&gt;\n
+        android:layout_gravity=''center''\n
+        android:id=''@+id/btnSearch''\n
+        android:text=''Cari Lokasi''/&gt;\n
     &lt;androidx.coordinatorlayout.widget.CoordinatorLayout\n
         android:layout_width=''match_parent''\n
         android:layout_height=''match_parent''&gt;\n

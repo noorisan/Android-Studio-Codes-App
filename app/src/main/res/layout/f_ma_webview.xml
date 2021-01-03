@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+package com.example.prototype;\n
+\n
+import androidx.appcompat.app.AppCompatActivity;\n
+\n
+import android.content.Intent;\n
+import android.os.Bundle;\n
+import android.view.KeyEvent;\n
+import android.view.View;\n
+import android.webkit.WebSettings;\n
+import android.webkit.WebViewClient;\n
+\n
+import com.google.android.material.floatingactionbutton.FloatingActionButton;\n
+\n
+public class WebView extends AppCompatActivity {\n
+android.webkit.WebView webView;\n
+    public static final String EXTRA_URL=''https://github.com/noorisan/Android-Studio-Codes-App'';\n
+    @Override\n
+    protected void onCreate(Bundle savedInstanceState) {\n
+        super.onCreate(savedInstanceState);\n
+        setContentView(R.layout.activity_web_view);\n
+        FloatingActionButton fab =findViewById(R.id.fab_btn);\n
+        webView=findViewById(R.id.webView);\n
+        WebSettings webSettings= webView.getSettings();\n
+        webSettings.setJavaScriptEnabled(true);\n
+        webView.setWebViewClient(new Callback());\n
+        String url=getIntent().getStringExtra(EXTRA_URL);\n
+        String text=url;\n
+        webView.loadUrl(text);\n
+\n
+        fab.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                Intent i = new Intent(WebView.this,Tabslayout.class);\n
+                i.putExtra(Tabslayout.EXTRA_DATA,''WebView'');\n
+                startActivity(i);\n
+            }\n
+        });\n
+    }\n
+\n
+    private class Callback extends WebViewClient {\n
+        @Override\n
+        public boolean shouldOverrideKeyEvent(android.webkit.WebView view, KeyEvent event) {\n
+            return false;\n
+        }\n
+    }\n
+}\n" />
+    </ScrollView>
+</LinearLayout>

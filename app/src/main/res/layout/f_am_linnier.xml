@@ -9,7 +9,6 @@
         android:layout_height="wrap_content">
 
         <TextView
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="
@@ -17,43 +16,64 @@
 &lt;LinearLayout xmlns:android=''http://schemas.android.com/apk/res/android''\n
     xmlns:app=''http://schemas.android.com/apk/res-auto''\n
     xmlns:tools=''http://schemas.android.com/tools''\n
-    android:layout_width=''match_parent''\n
-    android:layout_height=''match_parent''\n
-    tools:context=''.AutoCompleteWidget''\n
-    android:orientation=''vertical''&gt;\n
+    android:layout_width=''fill_parent''\n
+    android:layout_height=''fill_parent''\n
+    android:orientation=''vertical''\n
+    tools:context=''.LinnierActivity''&gt;\n
     &lt;TextView\n
         android:layout_width=''match_parent''\n
         android:layout_height=''wrap_content''\n
-        android:text=''AutoCompleteTextView''\n
+        android:text=''Horizontal''\n
         android:textAlignment=''center''\n
-        android:gravity=''center_horizontal'' /&gt;\n
-    &lt;AutoCompleteTextView\n
+        android:gravity=''center_horizontal''\n
+        android:textSize=''20dp''/&gt;\n
+    &lt;LinearLayout\n
         android:layout_width=''match_parent''\n
         android:layout_height=''wrap_content''\n
-        android:layout_margin=''20dp''\n
-        android:hint=''Masukan Nama''\n
-        android:padding=''15dp''\n
-        android:id=''@+id/AutoCompleteTextDemo''/&gt;\n
+        android:orientation=''horizontal''&gt;\n
+        &lt;Button\n
+            android:layout_width=''wrap_content''\n
+            android:layout_height=''wrap_content''\n
+            android:text=''Button 1'' /&gt;\n
+\n
+        &lt;Button\n
+            android:layout_width=''wrap_content''\n
+            android:layout_height=''wrap_content''\n
+            android:text=''Button 2'' /&gt;\n
+\n
+        &lt;Button\n
+            android:layout_width=''wrap_content''\n
+            android:layout_height=''wrap_content''\n
+            android:text=''Button 3'' /&gt;\n
+\n
+    &lt;/LinearLayout&gt;\n
     &lt;TextView\n
         android:layout_width=''match_parent''\n
         android:layout_height=''wrap_content''\n
-        android:layout_marginTop=''10dp''\n
-        android:text=''MultiAutoCompleteTextView''\n
+        android:layout_marginTop=''70dp''\n
+        android:text=''Vertical''\n
         android:textAlignment=''center''\n
-        android:gravity=''center_horizontal'' /&gt;\n
-    &lt;MultiAutoCompleteTextView\n
-        android:layout_width=''match_parent''\n
+        android:gravity=''center_horizontal''\n
+        android:textSize=''20dp''/&gt;\n
+    &lt;LinearLayout\n
+        android:layout_width=''fill_parent''\n
         android:layout_height=''wrap_content''\n
-        android:hint=''Masukan Beberapa Nama''\n
-        android:layout_margin=''20dp''\n
-        android:padding=''15dp''\n
-        android:id=''@+id/MultiAutoCompleteTextDemo''/&gt;\n
-    &lt;TextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:layout_marginLeft=''20dp''\n
-        android:layout_marginRight=''20dp''\n
-        android:id=''@+id/txtautotext'' /&gt;\n
+        android:orientation=''vertical''&gt;\n
+        &lt;Button\n
+            android:layout_width=''match_parent''\n
+            android:layout_height=''wrap_content''\n
+            android:text=''Button'' /&gt;\n
+\n
+        &lt;Button\n
+            android:layout_width=''match_parent''\n
+            android:layout_height=''wrap_content''\n
+            android:text=''Button'' /&gt;\n
+\n
+        &lt;Button\n
+            android:layout_width=''match_parent''\n
+            android:layout_height=''wrap_content''\n
+            android:text=''Button'' /&gt;\n
+    &lt;/LinearLayout&gt;\n
     &lt;androidx.coordinatorlayout.widget.CoordinatorLayout\n
         android:layout_width=''match_parent''\n
         android:layout_height=''match_parent''&gt;\n

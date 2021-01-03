@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+package com.example.prototype;\n
+\n
+import androidx.appcompat.app.AppCompatActivity;\n
+\n
+import android.content.Intent;\n
+import android.net.Uri;\n
+import android.os.Bundle;\n
+import android.view.View;\n
+import android.widget.Button;\n
+import android.widget.EditText;\n
+\n
+import com.google.android.material.floatingactionbutton.FloatingActionButton;\n
+\n
+public class MapView extends AppCompatActivity {\n
+\n
+    Button btnSearch;\n
+    EditText editText;\n
+    @Override\n
+    protected void onCreate(Bundle savedInstanceState) {\n
+        super.onCreate(savedInstanceState);\n
+        setContentView(R.layout.activity_map_view);\n
+        FloatingActionButton fab =findViewById(R.id.fab_btn);\n
+        btnSearch=findViewById(R.id.btnSearch);\n
+        editText=findViewById(R.id.edtSearch);\n
+        btnSearch.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                Uri gmmIntentUri = Uri.parse('', 0?q = ''+editText.getText().toString());\n
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW,gmmIntentUri);\n
+                mapIntent.setPackage('' '');\n
+                startActivity(mapIntent);\n
+            }\n
+        });\n
+        fab.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+            Intent i = new Intent(MapView.this,Tabslayout.class);\n
+            i.putExtra(Tabslayout.EXTRA_DATA,''MapView'');\n
+            startActivity(i);\n
+        }\n
+        });\n
+        }\n
+    }\n" />
+    </ScrollView>
+</LinearLayout>

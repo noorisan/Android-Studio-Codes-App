@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+package com.example.prototype;\n
+\n
+import androidx.appcompat.app.AppCompatActivity;\n
+\n
+import android.app.Dialog;\n
+import android.content.Intent;\n
+import android.os.Bundle;\n
+import android.view.View;\n
+import android.widget.Button;\n
+import android.widget.EditText;\n
+import android.widget.Spinner;\n
+import android.widget.TextView;\n
+\n
+import com.google.android.material.floatingactionbutton.FloatingActionButton;\n
+\n
+public class SpinnerWidget extends AppCompatActivity {\n
+    EditText namapanjang;\n
+    EditText nim;\n
+    Spinner jurusan;\n
+    Button simpan;\n
+    public int[] judul={1,2,3};\n
+    @Override\n
+    protected void onCreate(Bundle savedInstanceState) {\n
+        super.onCreate(savedInstanceState);\n
+        setContentView(R.layout.activity_spinner_widget);\n
+        FloatingActionButton fab =findViewById(R.id.fab_btn);\n
+        namapanjang=(EditText)findViewById(R.id.edt_namapanjang);\n
+        nim=(EditText)findViewById(R.id.edt_nim);\n
+        jurusan=(Spinner)findViewById(R.id.spn_jurusan);\n
+        simpan=(Button)findViewById(R.id.btn_simpan);\n
+\n
+        simpan.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                final Dialog dialog=new Dialog(SpinnerWidget.this);\n
+                dialog.setTitle(''@String/dtaMhs'');\n
+                dialog.setContentView(R.layout.layout_dialog);\n
+                TextView txt=(TextView)dialog.findViewById(R.id.desc);\n
+                txt.setText(''\nNama     : ''+namapanjang.getText().toString()\n
+                        +''\nNIM  : ''+nim.getText().toString()\n
+                        +''\nJurusan  : ''+jurusan.getSelectedItem().toString());\n
+                Button dialogButton=(Button)dialog.findViewById(R.id.dilBut);\n
+                dialogButton.setOnClickListener(new View.OnClickListener(){\n
+                    @Override\n
+                    public void onClick(View v){\n
+                        dialog.dismiss();\n
+                    }\n
+                });\n
+                dialog.show();\n
+            }\n
+        });\n
+        fab.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                Intent i = new Intent(SpinnerWidget.this,Tabslayout.class);\n
+                i.putExtra(Tabslayout.EXTRA_DATA,''Spinner'');\n
+                startActivity(i);\n
+            }\n
+        });\n
+    }\n
+}\n" />
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+package com.example.prototype;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;\n
+import android.os.Bundle;\n
+import android.view.View;\n
+\n
+import com.google.android.material.floatingactionbutton.FloatingActionButton;\n
+\n
+public class DateTime extends AppCompatActivity {\n
+\n
+    @Override\n
+    protected void onCreate(Bundle savedInstanceState) {\n
+        super.onCreate(savedInstanceState);\n
+        setContentView(R.layout.activity_date_time);\n
+        FloatingActionButton fab =findViewById(R.id.fab_btn);\n
+        fab.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                Intent i = new Intent(DateTime.this,Tabslayout.class);\n
+                i.putExtra(Tabslayout.EXTRA_DATA,''DateTime'');\n
+                startActivity(i);\n
+            }\n
+        });\n
+    }\n
+}\n" />
+    </ScrollView>
+</LinearLayout>

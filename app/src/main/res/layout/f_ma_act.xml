@@ -1,12 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="MainActivity.java\nAuto Complete Textview"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+package com.example.prototype;\n
+\n
+import androidx.appcompat.app.AppCompatActivity;\n
+\n
+import android.content.Intent;\n
+import android.os.Bundle;\n
+import android.view.View;\n
+import android.widget.ArrayAdapter;\n
+import android.widget.AutoCompleteTextView;\n
+import android.widget.MultiAutoCompleteTextView;\n
+import android.widget.TextView;\n
+\n
+import com.google.android.material.floatingactionbutton.FloatingActionButton;\n
+\n
+public class AutoCompleteWidget extends AppCompatActivity {\n
+AutoCompleteTextView AutoCompleteTextViewDemo;\n
+MultiAutoCompleteTextView MultiAutoCompleteTextViewDemo;\n
+TextView txtautotext;\n
+String[] namalist={''Abdul'',''Budi'',''Cinta'',''Dodi'',''Edy'',''Farhan'',''Gading'',''Hadi'',''Isan'',''Joko'',''Kriss'',''Loli'',''Muli'',''Noor'',''Odading'',''Putri'',''Qiqi'',''Rutmeida'',''Sumanto'',''Tini'',''Udil'',''Viva'',''Wendy''};\n
+    @Override\n
+    protected void onCreate(Bundle savedInstanceState) {\n
+        super.onCreate(savedInstanceState);\n
+        setContentView(R.layout.activity_auto_complete_widget);\n
+        FloatingActionButton fab =findViewById(R.id.fab_btn);\n
+        AutoCompleteTextViewDemo =(AutoCompleteTextView) findViewById(R.id.AutoCompleteTextDemo);\n
+        MultiAutoCompleteTextViewDemo=(MultiAutoCompleteTextView) findViewById(R.id.MultiAutoCompleteTextDemo);\n
+        txtautotext=(TextView)findViewById(R.id.txtautotext);\n
+        StringBuilder editText=new StringBuilder();\n
+        editText.append(''List Nama'').append(''\n'');\n
+        for (String value:namalist){\n
+            editText.append(value).append('','');\n
+        }\n
+        txtautotext.setText(editText);\n
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,namalist);\n
+        AutoCompleteTextViewDemo.setAdapter(adapter);\n
+        MultiAutoCompleteTextViewDemo.setAdapter(adapter);\n
+\n
+        AutoCompleteTextViewDemo.setThreshold(1);\n
+        AutoCompleteTextViewDemo.setAdapter(adapter);\n
+\n
+        MultiAutoCompleteTextViewDemo.setThreshold(1);\n
+        MultiAutoCompleteTextViewDemo.setTokenizer(new MultiAutoCompleteTextView.CommaTokenizer());\n
+\n
+        fab.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                Intent i = new Intent(AutoCompleteWidget.this,Tabslayout.class);\n
+                i.putExtra(Tabslayout.EXTRA_DATA,''ACT'');\n
+                startActivity(i);\n
+            }\n
+        });\n
+    }\n
+}\n" />
+    </ScrollView>
+</LinearLayout>

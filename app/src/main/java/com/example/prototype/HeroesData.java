@@ -16,10 +16,10 @@ public class HeroesData {
             "Spinner menyediakan cara cepat untuk memilih salah satu dari sekumpulan nilai. Dalam status default, spinner menampilkan nilai yang dipilihnya saat ini.",
             "AutoCompleteTextView adalah widget subclass dari EditText yang berfungsi sebagai auto-complete. Ketika user (pengguna) mengetikan suatu huruf atau  kata di EditText,  maka akan muncul pilihan menu dropdown di bawahnya ,lalu saat kita memilih kata tersebut maka text akan otomatis muncul.",
             "WebView adalah komponen sistem yang dibuat oleh Chrome dan memungkinkan aplikasi Android dapat menampilkan halaman website tanpa harus membuka web browser.",
-            "Linner Layout",
-            "Progress Bar...",
-            "Map View",
-            "Date and Time"
+            "Linear Layout adalah layout yang menyejajarkan semua child view-nya dalam satu arah, secara vertikal atau horizontal.",
+            "ProgressBar merupakan elemen UI yang digunakan untuk indikasi suatu proses dalam aplikasi, elemen UI tersebut akan menampilkan suatu pemrosesan pada konten yang di akses oleh user.",
+            "Map View, menambahkan peta ke aplikasi Android.",
+            "Date and Time, widget untuk menampilkan tanggal dan waktu."
     };
     private static int[] heroesImages = {
             R.drawable.spinner,

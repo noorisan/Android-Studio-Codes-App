@@ -99,6 +99,16 @@ public class MainActivity extends AppCompatActivity {
                     actIntent("https://developer.android.com/guide/topics/ui/controls/spinner");
                 }else if (data.getName().equals("Auto Complete TextView")){
                     actIntent("https://developer.android.com/reference/android/widget/AutoCompleteTextView");
+                }else if (data.getName().equals("Web View")){
+                    actIntent("https://developer.android.com/guide/webapps/webview?hl=id");
+                }else if (data.getName().equals("Linnier Layout")){
+                    actIntent("https://developer.android.com/guide/topics/ui/layout/linear?hl=id");
+                }else if (data.getName().equals("Progress Bar")){
+                    actIntent("https://developer.android.com/reference/android/widget/ProgressBar");
+                }else if (data.getName().equals("Map View")){
+                    actIntent("https://developers.google.com/maps/documentation/android-sdk/map?hl=id");
+                }else if (data.getName().equals("Date and Time")){
+                    actIntent("https://developer.android.com/reference/java/util/Date");
                 }
             }
         });
@@ -116,6 +126,16 @@ public class MainActivity extends AppCompatActivity {
                     ActIntent("https://developer.android.com/guide/topics/ui/controls/spinner");
                 }else if (data.getName().equals("Auto Complete TextView")){
                     ActIntent("https://developer.android.com/reference/android/widget/AutoCompleteTextView");
+                }else if (data.getName().equals("Web View")){
+                    ActIntent("https://developer.android.com/guide/webapps/webview?hl=id");
+                }else if (data.getName().equals("Linnier Layout")){
+                    ActIntent("https://developer.android.com/guide/topics/ui/layout/linear?hl=id");
+                }else if (data.getName().equals("Progress Bar")){
+                    ActIntent("https://developer.android.com/reference/android/widget/ProgressBar");
+                }else if (data.getName().equals("Map View")){
+                    ActIntent("https://developers.google.com/maps/documentation/android-sdk/map?hl=id");
+                }else if (data.getName().equals("Date and Time")){
+                    ActIntent("https://developer.android.com/reference/java/util/Date");
                 }
             }
         });

@@ -9,7 +9,6 @@
         android:layout_height="wrap_content">
 
         <TextView
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="
@@ -19,41 +18,34 @@
     xmlns:tools=''http://schemas.android.com/tools''\n
     android:layout_width=''match_parent''\n
     android:layout_height=''match_parent''\n
-    tools:context=''.AutoCompleteWidget''\n
-    android:orientation=''vertical''&gt;\n
-    &lt;TextView\n
+    android:orientation=''vertical''\n
+    android:padding=''20dp''&gt;\n
+\n
+    &lt;EditText\n
+        android:id=''@+id/edt_namapanjang''\n
+        android:layout_width=''match_parent''\n
+        android:layout_height=''79dp''\n
+        android:hint=''Nama Lengkap'' /&gt;\n
+\n
+    &lt;EditText\n
+        android:id=''@+id/edt_nim''\n
+        android:layout_width=''match_parent''\n
+        android:layout_height=''79dp''\n
+        android:hint=''@string/nim_mahasiswa'' /&gt;\n
+\n
+    &lt;Spinner\n
+        android:id=''@+id/spn_jurusan''\n
+        android:layout_width=''match_parent''\n
+        android:layout_height=''56dp''\n
+        android:layout_marginVertical=''10dp''\n
+        android:entries=''@array/listJurusan'' /&gt;\n
+\n
+    &lt;Button\n
+        android:id=''@+id/btn_simpan''\n
         android:layout_width=''match_parent''\n
         android:layout_height=''wrap_content''\n
-        android:text=''AutoCompleteTextView''\n
-        android:textAlignment=''center''\n
-        android:gravity=''center_horizontal'' /&gt;\n
-    &lt;AutoCompleteTextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:layout_margin=''20dp''\n
-        android:hint=''Masukan Nama''\n
-        android:padding=''15dp''\n
-        android:id=''@+id/AutoCompleteTextDemo''/&gt;\n
-    &lt;TextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:layout_marginTop=''10dp''\n
-        android:text=''MultiAutoCompleteTextView''\n
-        android:textAlignment=''center''\n
-        android:gravity=''center_horizontal'' /&gt;\n
-    &lt;MultiAutoCompleteTextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:hint=''Masukan Beberapa Nama''\n
-        android:layout_margin=''20dp''\n
-        android:padding=''15dp''\n
-        android:id=''@+id/MultiAutoCompleteTextDemo''/&gt;\n
-    &lt;TextView\n
-        android:layout_width=''match_parent''\n
-        android:layout_height=''wrap_content''\n
-        android:layout_marginLeft=''20dp''\n
-        android:layout_marginRight=''20dp''\n
-        android:id=''@+id/txtautotext'' /&gt;\n
+        android:text=''@string/simpan'' /&gt;\n
+\n
     &lt;androidx.coordinatorlayout.widget.CoordinatorLayout\n
         android:layout_width=''match_parent''\n
         android:layout_height=''match_parent''&gt;\n

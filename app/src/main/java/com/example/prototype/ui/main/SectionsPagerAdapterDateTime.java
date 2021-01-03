@@ -31,10 +31,10 @@ public class SectionsPagerAdapterDateTime extends FragmentPagerAdapter {
         Fragment fragment=null;
         switch (position){
             case 0:
-                fragment=new Fragment1("MainActivitySpinner");
+                fragment=new Fragment1("MainActivityDateTime");
                 break;
             case 1:
-                fragment=new Fragment1("Noor");
+                fragment=new Fragment1("Activity_MainDateTime");
                 break;
         }
         return fragment;

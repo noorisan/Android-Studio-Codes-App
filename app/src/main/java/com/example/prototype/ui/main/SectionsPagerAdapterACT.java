@@ -18,7 +18,7 @@ import com.example.prototype.R;
 public class SectionsPagerAdapterACT extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
 
     public SectionsPagerAdapterACT(Context context, FragmentManager fm) {
@@ -36,9 +36,6 @@ public class SectionsPagerAdapterACT extends FragmentPagerAdapter {
             case 1:
                 fragment=new Fragment1("Activity_MainACT");
                 break;
-            case 2:
-                fragment=new Fragment1("Noor");
-                break;
         }
         return fragment;
     }
@@ -52,6 +49,6 @@ public class SectionsPagerAdapterACT extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 2;
     }
 }

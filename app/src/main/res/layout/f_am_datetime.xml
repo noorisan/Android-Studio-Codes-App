@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+&lt;?xml version=''1.0'' encoding=''utf-8''?&gt;\n
+&lt;RelativeLayout xmlns:android=''http://schemas.android.com/apk/res/android''\n
+    xmlns:app=''http://schemas.android.com/apk/res-auto''\n
+    xmlns:tools=''http://schemas.android.com/tools''\n
+    android:layout_width=''fill_parent''\n
+    android:layout_height=''fill_parent''\n
+    tools:context=''.DateTime''&gt;\n
+    &lt;ScrollView\n
+        android:layout_width=''match_parent''\n
+        android:layout_height=''match_parent''&gt;\n
+        &lt;LinearLayout\n
+            android:layout_width=''match_parent''\n
+            android:layout_height=''match_parent''\n
+            android:orientation=''vertical''&gt;\n
+            &lt;TextView\n
+                android:layout_width=''match_parent''\n
+                android:layout_height=''match_parent''\n
+                android:text=''Time Picker''\n
+                android:textSize=''20dp''\n
+                android:layout_marginTop=''10dp''\n
+                android:layout_marginBottom=''10dp''\n
+                android:textAlignment=''center''\n
+                android:gravity=''center_horizontal'' /&gt;\n
+            &lt;TimePicker\n
+                android:layout_width=''match_parent''\n
+                android:layout_height=''match_parent''/&gt;\n
+            &lt;TextView\n
+                android:layout_width=''match_parent''\n
+                android:layout_height=''match_parent''\n
+                android:text=''Date Picker''\n
+                android:textSize=''20dp''\n
+                android:layout_marginTop=''10dp''\n
+                android:layout_marginBottom=''10dp''\n
+                android:textAlignment=''center''\n
+                android:gravity=''center_horizontal'' /&gt;\n
+            &lt;DatePicker\n
+                android:layout_gravity=''center''\n
+                android:layout_width=''wrap_content''\n
+                android:layout_height=''wrap_content''/&gt;\n
+        &lt;/LinearLayout&gt;\n
+    &lt;/ScrollView&gt;\n
+    &lt;androidx.coordinatorlayout.widget.CoordinatorLayout\n
+        android:layout_width=''match_parent''\n
+        android:layout_height=''match_parent''&gt;\n
+        &lt;com.google.android.material.floatingactionbutton.FloatingActionButton\n
+            android:id=''@+id/fab_btn''\n
+            android:layout_width=''wrap_content''\n
+            android:layout_height=''wrap_content''\n
+            android:layout_gravity=''bottom|end''\n
+            android:layout_margin=''16dp''\n
+            android:elevation=''6dp''\n
+            android:src=''@drawable/ic_baseline_code_24''\n
+            android:visibility=''visible''\n
+            app:backgroundTint=''@color/design_default_color_primary''\n
+            app:fabSize=''normal''\n
+            tools:visibility=''visible'' /&gt;\n
+    &lt;/androidx.coordinatorlayout.widget.CoordinatorLayout&gt;\n
+&lt;/RelativeLayout&gt;\n" />
+    </ScrollView>
+</LinearLayout>

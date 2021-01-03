@@ -31,10 +31,10 @@ public class SectionsPagerAdapterLinnierLayout extends FragmentPagerAdapter {
         Fragment fragment=null;
         switch (position){
             case 0:
-                fragment=new Fragment1("MainActivitySpinner");
+                fragment=new Fragment1("MainActivityLinnierLayout");
                 break;
             case 1:
-                fragment=new Fragment1("Noor");
+                fragment=new Fragment1("Activity_MainLinnierLayout");
                 break;
         }
         return fragment;

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="
+package com.example.prototype;\n
+\n
+import androidx.appcompat.app.AppCompatActivity;\n
+\n
+import android.app.ProgressDialog;\n
+import android.content.Intent;\n
+import android.os.Bundle;\n
+import android.os.Handler;\n
+import android.view.View;\n
+import android.widget.Button;\n
+\n
+import com.google.android.material.floatingactionbutton.FloatingActionButton;\n
+\n
+public class ProgressBar extends AppCompatActivity {\n
+    Button btnProgress;\n
+    ProgressDialog progressBar;\n
+    private int progressBarStatus=0;\n
+    private Handler progressBarHandler=new Handler();\n
+    private long fileSize=0;\n
+    @Override\n
+    protected void onCreate(Bundle savedInstanceState) {\n
+        super.onCreate(savedInstanceState);\n
+        setContentView(R.layout.activity_progress_bar);\n
+        addListenerOnButton();\n
+        FloatingActionButton fab =findViewById(R.id.fab_btn);\n
+\n
+        fab.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                Intent i = new Intent(ProgressBar.this,Tabslayout.class);\n
+                i.putExtra(Tabslayout.EXTRA_DATA,''ProgressBar'');\n
+                startActivity(i);\n
+            }\n
+        });\n
+    }\n
+    public void addListenerOnButton(){\n
+        btnProgress=findViewById(R.id.btnProgress);\n
+        btnProgress.setOnClickListener(new View.OnClickListener() {\n
+            @Override\n
+            public void onClick(View v) {\n
+                progressBar=new ProgressDialog(v.getContext());\n
+                progressBar.setCancelable(true);\n
+                progressBar.setMessage(''File Downloading...'');\n
+                progressBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);\n
+                progressBar.setProgress(0);\n
+                progressBar.setMax(100);\n
+                progressBar.show();\n
+\n
+                //reset progress bar status\n
+                progressBarStatus=0;\n
+                //reset filesize\n
+                fileSize=0;\n
+\n
+                new Thread(new Runnable() {\n
+                    @Override\n
+                    public void run() {\n
+                        while (progressBarStatus&lt;100){\n
+                            progressBarStatus = doSomeTask();\n
+                            try {\n
+                                Thread.sleep(1000);\n
+                            }catch (InterruptedException e){\n
+                                e.printStackTrace();\n
+                            }\n
+                            progressBarHandler.post(new Runnable() {\n
+                                @Override\n
+                                public void run() {\n
+                                    progressBar.setProgress(progressBarStatus);\n
+                                }\n
+                            });\n
+                        }\n
+                        if (progressBarStatus >= 100){\n
+                            try {\n
+                                Thread.sleep(2000);\n
+                            }catch (InterruptedException e){\n
+                                e.printStackTrace();\n
+                            }\n
+                            progressBar.dismiss();\n
+                        }\n
+                    }\n
+                }).start();\n
+            }\n
+        });\n
+    }\n
+    public int doSomeTask(){\n
+        while (fileSize&lt;=1000000){\n
+            fileSize++;\n
+            if (fileSize==100000){\n
+                return 10;\n
+            }else if (fileSize==200000){\n
+                return 20;\n
+            }else if (fileSize==300000){\n
+                return 30;\n
+            }\n
+        }\n
+        return 100;\n
+    }\n
+}\n" />
+    </ScrollView>
+</LinearLayout>
