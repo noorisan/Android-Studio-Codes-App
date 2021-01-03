@@ -17,6 +17,8 @@
         <item>Teknik Sipil</item>
     </string-array>
     <string name="title_activity_tab">TabActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">MainActivity.java</string>
+    <string name="tab_text_2">Activity_Main.xml</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="title_activity_tabslayout">Tabslayout</string>
 </resources>
