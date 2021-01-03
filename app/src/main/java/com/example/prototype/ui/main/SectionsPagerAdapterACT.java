@@ -15,13 +15,13 @@ import com.example.prototype.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class SectionsPagerAdapterACT extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapterACT(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -31,9 +31,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment=null;
         switch (position){
             case 0:
-                fragment=new Fragment1("Isan");
+                fragment=new Fragment1("MainActivityACT");
                 break;
             case 1:
+                fragment=new Fragment1("Noor");
+                break;
+            case 2:
                 fragment=new Fragment1("Noor");
                 break;
         }
@@ -49,6 +52,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 2;
+        return 3;
     }
 }
